@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,50 +11,123 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.blue[900],
       body: Column(
         children: [
-          const Text('Hello, welcome back!'),
-          const Text('Login to continue'),
-          const TextField(
-            decoration: InputDecoration(hintText: 'Username'),
+          const Text(
+            'Hello, welcome back!',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          const TextField(
-            decoration: InputDecoration(hintText: 'Password'),
+          const SizedBox(height: 32),
+          const Text(
+            'Login to continue',
+            style: TextStyle(color: Colors.white),
           ),
-          TextButton(
+          const SizedBox(height: 16),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Username',
+              border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              filled: true,
+              fillColor: Colors.white.withOpacity(0.5),
+            ),
+          ),
+          const SizedBox(height: 16),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Password',
+              border: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              filled: true,
+              fillColor: Colors.white.withOpacity(0.5),
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
               onPressed: () {
                 print('Forgot is Clicked');
               },
-              child: const Text('Forgot Password?')),
-          ElevatedButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Forgot Password?'),
+            ),
+          ),
+          SizedBox(
+            width: 250,
+            child: ElevatedButton(
               onPressed: () {
-                print('Forgot is Clicked');
+                print('Login is Clicked');
               },
-              child: const Text('Log in')),
-          const Text('Or sign in with'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amberAccent,
+                foregroundColor: Colors.black54,
+              ),
+              child: const Text('Log in'),
+            ),
+          ),
+          const SizedBox(height: 69),
+          const Text(
+            'Or sign in with',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 16),
           ElevatedButton(
             onPressed: () {
               print('Google is Clicked');
             },
+            // style: ElevatedButton.styleFrom(
+            //   backgroundColor: Colors.white,
+            //   foregroundColor: Colors.black54,
+            //   shape: RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.circular(10),
+            //   ),
+            // ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/google.png',
                   width: 22,
                   height: 22,
                 ),
+                const SizedBox(width: 8),
                 const Text('Login with Google'),
               ],
             ),
           ),
           ElevatedButton(
-            onPressed: () {
-              print('Facebook is Clicked');
-            },
+            onPressed: () {},
+            // style: ElevatedButton.styleFrom(
+            //   backgroundColor: Colors.white,
+            //   foregroundColor: Colors.black54,
+            //   shape: RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.all(
+            //       Radius.circular(50),
+            //     ),
+            //   ),
+            // ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/facebook.png',
                   width: 22,
                   height: 22,
+                ),
+                const SizedBox(
+                  width: 8,
                 ),
                 const Text('Login with Facebook'),
               ],
@@ -61,10 +135,23 @@ class LoginPage extends StatelessWidget {
           ),
           Row(
             children: [
-              const Text('Don\'t have an account?'),
+              const Text(
+                'Don\'t have an account?',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
               TextButton(
                 onPressed: () {},
-                child: const Text('Sign up'),
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.amberAccent,
+                ),
+                child: const Text(
+                  'Sign up',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
               ),
             ],
           ),
