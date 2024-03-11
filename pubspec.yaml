@@ -71,18 +71,18 @@ flutter:
   fonts:
      - family: Urbanist
        fonts:
-         - asset: fonts/Urbanist-Regular.ttf
-         - asset: fonts/Urbanist-Medium.ttf
+         - asset: assets/fonts/Urbanist-Regular.ttf
+         - asset: assets/fonts/Urbanist-Medium.ttf
            weight: 500
-         - asset: fonts/Urbanist-SemiBold.ttf
+         - asset: assets/fonts/Urbanist-SemiBold.ttf
            weight: 600
-         - asset: fonts/Urbanist-Bold.ttf
+         - asset: assets/fonts/Urbanist-Bold.ttf
            weight: 700
-         - asset: fonts/Urbanist-ExtraBold.ttf
+         - asset: assets/fonts/Urbanist-ExtraBold.ttf
            weight: 800
-         - asset: fonts/Urbanist-Black.ttf
+         - asset: assets/fonts/Urbanist-Black.ttf
            weight: 900
-         - asset: fonts/Urbanist-Light.ttf
+         - asset: assets/fonts/Urbanist-Light.ttf
            weight: 300
 
 

@@ -30,20 +30,20 @@ class LoginPage extends StatelessWidget {
               hintText: 'Username',
               border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(12),
                 ),
               ),
               filled: true,
               fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           TextField(
             decoration: InputDecoration(
               hintText: 'Password',
               border: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(10),
+                  Radius.circular(12),
                 ),
               ),
               filled: true,
