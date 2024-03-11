@@ -6,74 +6,93 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      resizeToAvoidBottomInset: false,
+      backgroundColor: const Color.fromARGB(255, 7, 34, 39),
       body: Column(
         children: [
-          const Text(
-            'Hello, welcome back!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
+          // const Text(
+          //   'Hello, welcome back!',
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //     fontSize: 22,
+          //     fontWeight: FontWeight.bold,
+          //   ),
+          // ),
+          // const SizedBox(height: 10), // Adjust spacing as needed
+          Image.asset(
+            'assets/images/logo.png',
+            width: 300,
+            height: 300,
           ),
-          const SizedBox(height: 32),
-          const Text(
-            'Login to continue',
-            style: TextStyle(color: Colors.white),
-          ),
-          const SizedBox(height: 16),
-          TextField(
-            decoration: InputDecoration(
-              hintText: 'Username',
-              border: const OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
+          // const Text(
+          //   'Hunos?',
+          //   style: TextStyle(color: Colors.white),
+          // ),
+
+          const SizedBox(
+            width: 369,
+            height: 45,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Username',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(17),
+                  ),
                 ),
+                filled: true,
+                fillColor: Color.fromARGB(255, 79, 189, 186),
+                // fillColor: Colors.white.withOpacity(0.5),
               ),
-              filled: true,
-              fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
-          const SizedBox(height: 12),
-          TextField(
-            decoration: InputDecoration(
-              hintText: 'Password',
-              border: const OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(12),
+          const SizedBox(height: 5),
+          const SizedBox(
+            width: 369,
+            height: 45,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(17),
+                  ),
                 ),
+                filled: true,
+                fillColor: Color.fromARGB(255, 79, 189, 186),
               ),
-              filled: true,
-              fillColor: Colors.white.withOpacity(0.5),
             ),
           ),
+          // const SizedBox(
+          //   height: 32,
+          // ),
           Align(
-            alignment: Alignment.centerRight,
+            alignment: Alignment.center,
             child: TextButton(
               onPressed: () {
                 print('Forgot is Clicked');
               },
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
+                foregroundColor: const Color.fromARGB(255, 53, 133, 139),
               ),
               child: const Text('Forgot Password?'),
             ),
           ),
           SizedBox(
-            width: 250,
+            width: 200,
             child: ElevatedButton(
               onPressed: () {
                 print('Login is Clicked');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.amberAccent,
+                backgroundColor: const Color.fromARGB(255, 174, 254, 255),
                 foregroundColor: Colors.black54,
               ),
               child: const Text('Log in'),
             ),
           ),
-          const SizedBox(height: 69),
+          const Spacer(),
+          // const SizedBox(height: 69), // height from bottom-stuff
           const Text(
             'Or sign in with',
             style: TextStyle(
@@ -85,13 +104,20 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               print('Google is Clicked');
             },
-            // style: ElevatedButton.styleFrom(
-            //   backgroundColor: Colors.white,
-            //   foregroundColor: Colors.black54,
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(10),
-            //   ),
-            // ),
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(150, 40),
+              // Set desired width and height
+              maximumSize: const Size(369, 40),
+              // Set the same size for a fixed size
+              padding: EdgeInsets.zero,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black54,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(50),
+                ),
+              ),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -105,17 +131,23 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
+
           ElevatedButton(
             onPressed: () {},
-            // style: ElevatedButton.styleFrom(
-            //   backgroundColor: Colors.white,
-            //   foregroundColor: Colors.black54,
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.all(
-            //       Radius.circular(50),
-            //     ),
-            //   ),
-            // ),
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(150, 40),
+              // Set desired width and height
+              maximumSize: const Size(369, 40),
+              // Set the same size for a fixed size
+              padding: EdgeInsets.zero,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black54,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(50),
+                ),
+              ),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -132,6 +164,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
                 'Don\'t have an account?',
@@ -142,7 +175,7 @@ class LoginPage extends StatelessWidget {
               TextButton(
                 onPressed: () {},
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.amberAccent,
+                  foregroundColor: const Color.fromARGB(255, 0, 173, 181),
                 ),
                 child: const Text(
                   'Sign up',
