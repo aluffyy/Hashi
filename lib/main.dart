@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loremipsum/login_page.dart';
+import 'package:loremipsum/pages/home_page.dart';
+import 'package:loremipsum/pages/login_page.dart';
 import 'package:loremipsum/styles/app_colors.dart';
 
 void main() {
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Urbanist',
         scaffoldBackgroundColor: AppColors.background,
       ),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home':(context) => HomePage(),
+      },
     );
   }
 }
