@@ -20,9 +20,12 @@ class HomePage extends StatelessWidget {
           Icon(Icons.location_on_outlined),
         ],
       ),
-      body: Column(
-        children: mockUsersFromServer(),
-      ),
+      body: ListView(children: mockUsersFromServer(),)
+      // SingleChildScrollView (
+      //   child: Column(
+      //     children: mockUsersFromServer(),
+      //   ),
+      // ),
     );
   }
 
