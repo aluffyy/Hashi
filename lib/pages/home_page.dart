@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loremipsum/styles/app_colors.dart';
+import '../styles/app_colors.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

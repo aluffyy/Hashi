@@ -62,9 +62,11 @@ class LoginPage extends StatelessWidget {
                     fillColor: Color.fromARGB(255, 79, 189, 186),
                   ),
                 ),
+
                 // const SizedBox(
                 //   height: 32,
                 // ),
+
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
@@ -89,7 +91,7 @@ class LoginPage extends StatelessWidget {
                       //     },
                       //   ),
                       // );
-                      Navigator.of(context).pushReplacementNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/main');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff14FFEC),
