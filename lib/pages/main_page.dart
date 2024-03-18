@@ -1,4 +1,6 @@
+import 'package:Hashi/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -8,25 +10,55 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bottom Navigation'),
-      ),
-      body: const Center(
-        child: Text('centerText'),
-      ),
+      body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Home'),
+        items: [
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/ic_home.svg'), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/ic_favorite.svg'),
+              label: 'Favorite'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/ic_add.svg'),
+              label: 'Add post'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/ic_messages.svg'),
+              label: 'Messages'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/svg/ic_user.svg'), label: 'User'),
         ],
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+        type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: Colors.teal,
       ),
     );
   }
+
+  final pages = [
+    HomePage(),
+    Center(
+      child: Text('Favorite'),
+    ),
+    Center(
+      child: Text('Add Post'),
+    ),
+    Center(
+      child: Text('Messages'),
+    ),
+    Center(
+      child: Text('User'),
+    ),
+  ];
 }
