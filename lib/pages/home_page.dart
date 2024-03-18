@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import '../styles/app_colors.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  List<String> users = [];
 
   @override
   Widget build(BuildContext context) {
+    mockUsersFromServer();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.disableButton,
@@ -17,21 +20,30 @@ class HomePage extends StatelessWidget {
             color: AppColors.disableFont,
           ),
         ),
-        actions: const [
+        centerTitle: false,
+        actions: [
           Icon(Icons.location_on_outlined),
         ],
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {},
+      body: ListView.separated(
+        itemBuilder: (context, index) {
+          return PostItem(
+            user: users[index],
+          );
+        },
+        itemCount: users.length,
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            height: 24,
+          );
+        },
       ),
     );
   }
 
-  List<Widget> mockUsersFromServer() {
-    List<Widget> users = [];
-    for (int i = 0; i < 1000; i++) {
-      users.add(PostItem());
+  mockUsersFromServer() {
+    for (int i = 0; i < 100; i++) {
+      users.add('User number $i');
     }
-    return users;
   }
 }

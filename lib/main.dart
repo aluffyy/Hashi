@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // import 'package:loremipsum/pages/home_page.dart';
 // import 'package:loremipsum/pages/login_page.dart';
 // import 'package:loremipsum/pages/main_page.dart';
@@ -26,9 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const LoginPage(),
-        '/home':(context) => const HomePage(),
-        '/main':(context) => const MainPage(),
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/main': (context) => MainPage(),
       },
     );
   }
