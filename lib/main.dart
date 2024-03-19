@@ -1,9 +1,5 @@
+import 'package:Hashi/pages/edit_profile_page.dart';
 import 'package:flutter/material.dart';
-
-// import 'package:loremipsum/pages/home_page.dart';
-// import 'package:loremipsum/pages/login_page.dart';
-// import 'package:loremipsum/pages/main_page.dart';
-// import 'package:loremipsum/styles/app_colors.dart';
 
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
@@ -30,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
         '/main': (context) => MainPage(),
+        '/edit_profile': (context) => EditProfilePage(),
       },
     );
   }

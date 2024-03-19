@@ -1,6 +1,7 @@
 import 'package:Hashi/components/post_item.dart';
+import 'package:Hashi/components/toolbar.dart';
 import 'package:flutter/material.dart';
-import '../styles/app_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -11,18 +12,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUsersFromServer();
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.disableButton,
-        elevation: 255,
-        title: const Text(
-          '橋-Hashi',
-          style: TextStyle(
-            color: AppColors.disableFont,
-          ),
-        ),
-        centerTitle: false,
+      appBar: Toolbar(
+        title: '橋-Hashi',
         actions: [
-          Icon(Icons.location_on_outlined),
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/svg/ic_location.svg'),
+          ),
         ],
       ),
       body: ListView.separated(
