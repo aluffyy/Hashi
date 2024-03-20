@@ -1,9 +1,6 @@
-import 'package:Hashi/pages/edit_profile_page.dart';
+import 'package:Hashi/config/app_routes.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
-import 'pages/login_page.dart';
-import 'pages/main_page.dart';
 import 'styles/app_colors.dart';
 
 void main() {
@@ -21,13 +18,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
         brightness: Brightness.dark,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
-        '/main': (context) => MainPage(),
-        '/edit_profile': (context) => EditProfilePage(),
-      },
+      initialRoute: AppRoutes.login,
+      routes: AppRoutes.pages,
     );
   }
 }

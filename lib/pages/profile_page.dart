@@ -1,4 +1,5 @@
 import 'package:Hashi/components/toolbar.dart';
+import 'package:Hashi/config/app_routes.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class ProfilePage extends StatelessWidget {
             onSelected: (value) {
               switch (value) {
                 case ProfileMenu.edit:
-                  Navigator.of(context).pushNamed('/edit_profile');
+                  Navigator.of(context).pushNamed(AppRoutes.editProfile);
                   break;
                 case ProfileMenu.logout:
                   break;
@@ -28,12 +29,12 @@ class ProfilePage extends StatelessWidget {
             itemBuilder: (context) {
               return [
                 const PopupMenuItem(
-                  child: Text('Edit'),
                   value: ProfileMenu.edit,
+                  child: Text('Edit'),
                 ),
                 const PopupMenuItem(
-                  child: Text('Log out'),
                   value: ProfileMenu.logout,
+                  child: Text('Log out'),
                 ),
               ];
             },
@@ -43,7 +44,7 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(20),
             ),
             child: Image.asset(

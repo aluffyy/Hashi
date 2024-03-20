@@ -49,15 +49,15 @@ class _MainPageState extends State<MainPage> {
 
   final pages = [
     HomePage(),
-    Center(
+    const Center(
       child: Text('Favorite'),
     ),
-    Center(
+    const Center(
       child: Text('Add Post'),
     ),
-    Center(
+    const Center(
       child: Text('Messages'),
     ),
-    ProfilePage(),
+    const ProfilePage(),
   ];
 }

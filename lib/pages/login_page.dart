@@ -1,3 +1,5 @@
+import 'package:Hashi/config/app_routes.dart';
+import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -27,13 +29,18 @@ class LoginPage extends StatelessWidget {
                 const Spacer(),
                 Image.asset(
                   'assets/images/logo.png',
-                  width: 300,
-                  height: 300,
+                  width: 200,
+                  height: 200,
                 ),
-                // const Text(
-                //   'Hunos?',
-                //   style: TextStyle(color: Colors.white),
-                // ),
+                const Text(
+                  'Hashi',
+                  style: AppText.header1,
+                ),
+                const Text(
+                  'Bridge between connections',
+                  style: AppText.subtitle1,
+                ),
+
                 const Spacer(),
                 const TextField(
                   decoration: InputDecoration(
@@ -91,7 +98,7 @@ class LoginPage extends StatelessWidget {
                       //     },
                       //   ),
                       // );
-                      Navigator.of(context).pushReplacementNamed('/main');
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.main);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff14FFEC),

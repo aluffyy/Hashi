@@ -20,7 +20,7 @@ class PostItem extends StatelessWidget {
                 width: 40,
                 height: 40,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -29,14 +29,14 @@ class PostItem extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Image.asset('assets/temp/post1.jpg'),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
-          Text(
+          const Text(
             'I love lavender 💜',
             style: AppText.subtitle3,
           ),

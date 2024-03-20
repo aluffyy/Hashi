@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     mockUsersFromServer();
     return Scaffold(
       appBar: Toolbar(
-        title: '橋-Hashi',
+        title: 'Hashi',
         actions: [
           IconButton(
             onPressed: () {},
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
         },
         itemCount: users.length,
         separatorBuilder: (BuildContext context, int index) {
-          return SizedBox(
+          return const SizedBox(
             height: 24,
           );
         },
