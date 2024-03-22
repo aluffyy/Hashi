@@ -1,4 +1,5 @@
 import 'package:Hashi/components/toolbar.dart';
+import 'package:Hashi/components/user_avatar.dart';
 import 'package:Hashi/config/app_routes.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
@@ -43,15 +44,8 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ClipRRect(
-            borderRadius: const BorderRadius.all(
-              Radius.circular(20),
-            ),
-            child: Image.asset(
-              'assets/temp/user1.jpg',
-              width: 90,
-              height: 90,
-            ),
+          UserAvatar(
+            size: 90,
           ),
           const SizedBox(
             height: 24,

@@ -1,3 +1,4 @@
+import 'package:Hashi/components/app_icons.dart';
 import 'package:Hashi/components/post_item.dart';
 import 'package:Hashi/components/toolbar.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset('assets/svg/ic_location.svg'),
+            icon: SvgPicture.asset(AppIcons.icLocation),
           ),
         ],
       ),

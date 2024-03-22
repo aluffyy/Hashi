@@ -1,3 +1,4 @@
+import 'package:Hashi/components/app_icons.dart';
 import 'package:Hashi/config/app_routes.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
@@ -139,7 +140,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/google.png',
+                          AppIcons.icGoogle,
                           width: 22,
                           height: 22,
                         ),
@@ -175,7 +176,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/facebook.png',
+                          AppIcons.icFacebook,
                           width: 22,
                           height: 22,
                         ),
