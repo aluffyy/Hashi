@@ -1,6 +1,6 @@
 ## Hashi: Building Bridge between connections.
 
-**Hashi** is a full-fledged social media app built with Flutter, designed to foster connections and create a vibrant online community. We're in active development, constantly striving to improve the user experience. We warmly welcome contributions from talented developers who share our vision!
+**Hashi** is a full-fledged social media app built with Flutter, designed to foster connections and create a vibrant online community. We're in active development, constantly striving to improve the user experience. I warmly welcome contributions from talented developers!
 
 **Features (Current and Planned):**
 
@@ -24,7 +24,7 @@
 
 **Contributing to Hashi:**
 
-We encourage you to partake in the evolution of Hashi! Here's how you can join the adventure:
+I encourage you to partake in the evolution of Hashi! Here's how you can join the adventure:
 
 1. **Forking the Repository:**
    - **GitHub Interface:** Visit the Hashi repository on GitHub ([https://github.com/](https://github.com/)<your-username>/Hashi) and click the "Fork" button in the top-right corner. This creates a copy of the repository under your own GitHub account.
