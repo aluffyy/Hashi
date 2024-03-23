@@ -28,15 +28,15 @@ We encourage you to partake in the evolution of Hashi! Here's how you can join t
 
 1. **Forking the Repository:**
    - **GitHub Interface:** Visit the Hashi repository on GitHub ([https://github.com/](https://github.com/)<your-username>/Hashi) and click the "Fork" button in the top-right corner. This creates a copy of the repository under your own GitHub account.
-   - **Command Line:** Alternatively, use the `git` command: `git clone --depth=1 https://github.com/<your-username>/Hashi.git`
+   - **Command Line:** Alternatively, use the `git` command: ```git clone --depth=1 https://github.com/aluffyy/Hashi.git```
 
 2. **Cloning Your Fork:**
    - Access your terminal or command prompt.
-   - **Command:** Navigate to your desired local directory and use `git clone https://github.com/<your-username>/Hashi.git` to clone your forked repository to your local machine.
+   - **Command:** Navigate to your desired local directory and use ```git clone https://github.com/<your-username>/Hashi.git``` to clone your forked repository to your local machine.
 
 3. **Creating a Branch:**
    - **Purpose:** Branches serve to isolate your changes from the main development branch (master).
-   - **Command:** Use `git checkout -b <your_branch_name>` to create a new branch from the `master` branch. Replace `<your_branch_name>` with a descriptive name (e.g., `feature/add_group_chats`).
+   - **Command:** Use ```git checkout -b <your_branch_name>``` to create a new branch from the `master` branch. Replace `<your_branch_name>` with a descriptive name (e.g., `feature/add_group_chats`).
 
 4. **Making Your Magic Happen:**
    - Open your preferred code editor (e.g., Visual Studio Code, IntelliJ IDEA) and navigate to the cloned Hashi project directory.
@@ -45,10 +45,10 @@ We encourage you to partake in the evolution of Hashi! Here's how you can join t
 
 5. **Committing Your Work:**
    - **Git Command:** Use `git add <changed_files>` to stage your changes for committing. You can specify specific files or use `git add .` for all modified files.
-   - **Commit Message:** Provide a clear and concise message describing your changes using `git commit -m "<your_commit_message>"`.
+   - **Commit Message:** Provide a clear and concise message describing your changes using ```git commit -m "<your_commit_message>"```.
 
 6. **Pushing to Your Fork:**
-   - **Command:** Share your committed changes with the remote repository (your forked copy on GitHub) using `git push origin <your_branch_name>`.
+   - **Command:** Share your committed changes with the remote repository (your forked copy on GitHub) using ```git push origin <your_branch_name>```.
 
 7. **Pull Request Power:**
    - Visit your forked repository on GitHub.
