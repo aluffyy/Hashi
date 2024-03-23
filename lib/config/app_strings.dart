@@ -1,5 +1,7 @@
 class AppStrings {
   static const appName = 'Hashi';
+
+  // static const helloWelcome = 'Hello, welcome back!';
   // static const loginToContinue = 'Login to continue';
   static const username = 'Username';
   static const password = 'Password';
