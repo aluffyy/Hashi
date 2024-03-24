@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: ListView.separated(
+        padding: const EdgeInsets.symmetric(vertical: 32),
         itemBuilder: (context, index) {
           return PostItem(
             user: users[index],

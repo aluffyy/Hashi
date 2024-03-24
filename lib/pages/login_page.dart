@@ -80,7 +80,8 @@ class LoginPage extends StatelessWidget {
                     alignment: Alignment.center,
                     child: TextButton(
                       onPressed: () {
-                        print('Forgot is Clicked');
+                        debugPrint('Forgot is Clicked');
+                        //TODO : Implement Forgot Password
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: const Color.fromARGB(255, 53, 133, 139),
@@ -121,7 +122,8 @@ class LoginPage extends StatelessWidget {
                     height: 48,
                     child: ElevatedButton(
                       onPressed: () {
-                        print('Google is Clicked');
+                        debugPrint('Google is Clicked');
+                        //TODO : Implement Google Login
                       },
                       style: ElevatedButton.styleFrom(
                         // minimumSize: const Size(150, 40),
