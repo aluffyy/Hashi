@@ -6,9 +6,9 @@ import 'package:Hashi/pages/main_page.dart';
 class AppRoutes {
   static final pages = {
     '/': (context) => const LoginPage(),
-    '/home': (context) => HomePage(),
+    '/home': (context) => const HomePage(),
     '/main': (context) => const MainPage(),
-    '/edit_profile': (context) => EditProfilePage(),
+    '/edit_profile': (context) => const EditProfilePage(),
   };
 
   static const login = '/';

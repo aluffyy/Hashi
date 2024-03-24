@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: ListView.separated(
+        padding: const EdgeInsets.symmetric(vertical: 32),
         itemBuilder: (context, index) {
           return PostItem(
             user: users[index],
