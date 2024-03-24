@@ -8,7 +8,7 @@ class AppRoutes {
     '/': (context) => const LoginPage(),
     '/home': (context) => HomePage(),
     '/main': (context) => const MainPage(),
-    '/edit_profile': (context) => const EditProfilePage(),
+    '/edit_profile': (context) => EditProfilePage(),
   };
 
   static const login = '/';

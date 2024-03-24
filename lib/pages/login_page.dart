@@ -1,5 +1,6 @@
 import 'package:Hashi/components/app_icons.dart';
 import 'package:Hashi/config/app_routes.dart';
+import 'package:Hashi/styles/app_colors.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 const Spacer(),
-                const TextField(
+                TextField(
                   decoration: InputDecoration(
                     hintText: 'Username',
                     border: OutlineInputBorder(
@@ -52,13 +53,13 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     filled: true,
-                    fillColor: Color.fromARGB(255, 79, 189, 186),
+                    fillColor: AppColors.fieldColor,
                     // fillColor: Colors.white.withOpacity(0.5),
                   ),
                 ),
 
                 const SizedBox(height: 8),
-                const TextField(
+                TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
                     border: OutlineInputBorder(
@@ -67,7 +68,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     filled: true,
-                    fillColor: Color.fromARGB(255, 79, 189, 186),
+                    fillColor: AppColors.fieldColor,
                   ),
                 ),
 
