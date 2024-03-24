@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../styles/app_colors.dart';
+import '../styles/app_text.dart';
+
 class Toolbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final List<Widget>? actions;
@@ -8,15 +11,13 @@ class Toolbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context).colorScheme;
-    var textTheme = Theme.of(context).textTheme;
     return AppBar(
-      backgroundColor: theme.background,
+      backgroundColor: AppColors.disableButton,
       elevation: 255,
       title: Text(
         title,
-        style: textTheme.displayLarge,
-        selectionColor: theme.onSurface,
+        style: AppText.header1,
+        selectionColor: AppColors.disableFont,
         // TextStyle(
         //   color: AppColors.disableFont,
         // ),

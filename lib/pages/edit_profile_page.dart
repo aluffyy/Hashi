@@ -2,6 +2,8 @@ import 'package:Hashi/components/app_text_field.dart';
 import 'package:Hashi/components/toolbar.dart';
 import 'package:Hashi/components/user_avatar.dart';
 import 'package:Hashi/config/app_strings.dart';
+import 'package:Hashi/styles/app_colors.dart';
+import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
 enum Gender {
@@ -11,7 +13,7 @@ enum Gender {
 }
 
 class EditProfilePage extends StatefulWidget {
-  const EditProfilePage({super.key});
+  EditProfilePage({super.key});
 
   @override
   State<EditProfilePage> createState() => _EditProfilePageState();
@@ -22,13 +24,11 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context).colorScheme;
-    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: const Toolbar(title: AppStrings.editProfile),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
               Stack(
@@ -44,9 +44,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     right: 0,
                     child: Container(
                       padding: const EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                        color: theme.primary,
-                        borderRadius: const BorderRadius.all(
+                      decoration: const BoxDecoration(
+                        color: AppColors.primary,
+                        borderRadius: BorderRadius.all(
                           Radius.circular(6),
                         ),
                       ),
@@ -84,13 +84,15 @@ class _EditProfilePageState extends State<EditProfilePage> {
               ),
               Container(
                 padding: const EdgeInsets.only(left: 12, right: 12, top: 6),
-                decoration: BoxDecoration(color: theme.secondary, borderRadius: const BorderRadius.all(Radius.circular(12))),
+                decoration: BoxDecoration(
+                    color: AppColors.fieldColor,
+                    borderRadius: const BorderRadius.all(Radius.circular(12))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       AppStrings.gender,
-                      style: textTheme.displaySmall!.copyWith(
+                      style: AppText.body1.copyWith(
                         fontSize: 12,
                       ),
                     ),
@@ -100,7 +102,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           child: RadioListTile(
                             title: const Text(AppStrings.male),
                             value: Gender.male,
-                            visualDensity: const VisualDensity(horizontal: VisualDensity.minimumDensity, vertical: VisualDensity.minimumDensity),
+                            visualDensity: const VisualDensity(
+                                horizontal: VisualDensity.minimumDensity,
+                                vertical: VisualDensity.minimumDensity),
                             contentPadding: EdgeInsets.zero,
                             groupValue: gender,
                             onChanged: (value) {
@@ -116,7 +120,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           child: RadioListTile(
                             title: const Text(AppStrings.female),
                             value: Gender.female,
-                            visualDensity: const VisualDensity(horizontal: VisualDensity.minimumDensity, vertical: VisualDensity.minimumDensity),
+                            visualDensity: const VisualDensity(
+                                horizontal: VisualDensity.minimumDensity,
+                                vertical: VisualDensity.minimumDensity),
                             contentPadding: EdgeInsets.zero,
                             groupValue: gender,
                             onChanged: (value) {
