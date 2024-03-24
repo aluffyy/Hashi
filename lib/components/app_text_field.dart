@@ -1,4 +1,3 @@
-import 'package:Hashi/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextField extends StatelessWidget {
@@ -9,21 +8,20 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context).colorScheme;
+    // refactor matching theme
     return TextField(
       onChanged: onChange,
       decoration: InputDecoration(
         hintText: hint,
         labelText: hint,
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: Colors.white,
         ),
-        border: const UnderlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(17))),
-        focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.transparent),
-            borderRadius: BorderRadius.all(Radius.circular(17))),
+        border: const UnderlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(17))),
+        focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.transparent), borderRadius: BorderRadius.all(Radius.circular(17))),
         filled: true,
-        fillColor: AppColors.fieldColor,
+        fillColor: theme.secondary,
       ),
     );
   }

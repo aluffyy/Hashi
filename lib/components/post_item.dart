@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../styles/app_text.dart';
-
 class PostItem extends StatelessWidget {
   final String user;
 
@@ -9,6 +7,7 @@ class PostItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
@@ -25,7 +24,7 @@ class PostItem extends StatelessWidget {
               ),
               Text(
                 user,
-                style: AppText.subtitle3,
+                style: textTheme.displaySmall,
               ),
             ],
           ),
@@ -36,9 +35,9 @@ class PostItem extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          const Text(
+          Text(
             'I love lavender 💜',
-            style: AppText.subtitle3,
+            style: textTheme.displayMedium,
           ),
         ],
       ),

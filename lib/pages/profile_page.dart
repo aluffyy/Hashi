@@ -1,16 +1,19 @@
 import 'package:Hashi/components/toolbar.dart';
 import 'package:Hashi/components/user_avatar.dart';
 import 'package:Hashi/config/app_routes.dart';
-import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
-enum ProfileMenu { edit, logout }
+enum ProfileMenu {
+  edit,
+  logout
+}
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: Toolbar(
         title: 'Profile',
@@ -44,51 +47,51 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          UserAvatar(
+          const UserAvatar(
             size: 90,
           ),
           const SizedBox(
             height: 24,
           ),
-          const Text(
+          Text(
             'aliza',
-            style: AppText.header2,
+            style: textTheme.displayLarge,
           ),
           const SizedBox(
             height: 24,
           ),
-          const Text(
+          Text(
             'Dhaka',
-            style: AppText.subtitle3,
+            style: textTheme.displayMedium,
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
                   Text(
                     '333',
-                    style: AppText.header2,
+                    style: textTheme.displayMedium,
                   ),
-                  Text('Followers')
+                  Text('Followers', style: textTheme.displaySmall)
                 ],
               ),
               Column(
                 children: [
                   Text(
                     '444',
-                    style: AppText.header2,
+                    style: textTheme.displayMedium,
                   ),
-                  Text('Posts')
+                  Text('Posts', style: textTheme.displaySmall)
                 ],
               ),
               Column(
                 children: [
                   Text(
                     '5555',
-                    style: AppText.header2,
+                    style: textTheme.displayMedium,
                   ),
-                  Text('Following')
+                  Text('Following', style: textTheme.displaySmall)
                 ],
               ),
             ],
