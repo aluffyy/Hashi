@@ -1,4 +1,3 @@
-//TODO: Create light and dark themed icons
 class AppIcons {
   static const _png = 'assets/images/';
   static const _svg = 'assets/svg/';

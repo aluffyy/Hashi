@@ -16,16 +16,20 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context).colorScheme;
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: SvgPicture.asset(AppIcons.icHome), label: 'Home'),
-          BottomNavigationBarItem(icon: SvgPicture.asset(AppIcons.icFavorite), label: 'Favorite'),
-          BottomNavigationBarItem(icon: SvgPicture.asset(AppIcons.icAdd), label: 'Add post'),
-          BottomNavigationBarItem(icon: SvgPicture.asset(AppIcons.icMessage), label: 'Messages'),
-          BottomNavigationBarItem(icon: SvgPicture.asset(AppIcons.icUser), label: 'User'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(AppIcons.icHome), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(AppIcons.icFavorite), label: 'Favorite'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(AppIcons.icAdd), label: 'Add post'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(AppIcons.icMessage), label: 'Messages'),
+          BottomNavigationBarItem(
+              icon: SvgPicture.asset(AppIcons.icUser), label: 'User'),
         ],
         currentIndex: currentIndex,
         onTap: (index) {
@@ -36,14 +40,13 @@ class _MainPageState extends State<MainPage> {
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: theme.secondary,
-        elevation: 0,
+        backgroundColor: Colors.teal,
       ),
     );
   }
 
   final pages = [
-    const HomePage(),
+    HomePage(),
     const Center(
       child: Text('Favorite'),
     ),
