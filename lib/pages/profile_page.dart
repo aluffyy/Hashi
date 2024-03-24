@@ -1,6 +1,7 @@
 import 'package:Hashi/components/toolbar.dart';
 import 'package:Hashi/components/user_avatar.dart';
 import 'package:Hashi/config/app_routes.dart';
+import 'package:Hashi/styles/app_colors.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
@@ -42,28 +43,46 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const Padding(
-        padding:  EdgeInsets.only(top: 12.0),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 25.0),
         child: Column(
           children: [
-            UserAvatar(
-              size: 90,
+            Container(
+              width: double.maxFinite,
+              margin: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: AppColors.background2,
+              ),
+              child: const Column(
+                children: [
+                  UserAvatar(
+                    size: 90,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Aliza',
+                    style: AppText.header2,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'New Delhi, Delhi',
+                    style: AppText.subtitle3,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
-            SizedBox(
-              height: 24,
+
+            const SizedBox(
+              height: 25,
             ),
-            Text(
-              'aliza',
-              style: AppText.header2,
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            Text(
-              'Dhaka',
-              style: AppText.subtitle3,
-            ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
@@ -95,10 +114,10 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            Divider(
-              thickness: 1,
-              height: 24,
-            ),
+            // Divider(
+            //   thickness: 1,
+            //   height: 24,
+            // ),
           ],
         ),
       ),
