@@ -42,62 +42,65 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          UserAvatar(
-            size: 90,
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          const Text(
-            'aliza',
-            style: AppText.header2,
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          const Text(
-            'Dhaka',
-            style: AppText.subtitle3,
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    '333',
-                    style: AppText.header2,
-                  ),
-                  Text('Followers')
-                ],
-              ),
-              Column(
-                children: [
-                  Text(
-                    '444',
-                    style: AppText.header2,
-                  ),
-                  Text('Posts')
-                ],
-              ),
-              Column(
-                children: [
-                  Text(
-                    '5555',
-                    style: AppText.header2,
-                  ),
-                  Text('Following')
-                ],
-              ),
-            ],
-          ),
-          const Divider(
-            thickness: 1,
-            height: 24,
-          ),
-        ],
+      body: const Padding(
+        padding:  EdgeInsets.only(top: 12.0),
+        child: Column(
+          children: [
+            UserAvatar(
+              size: 90,
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Text(
+              'aliza',
+              style: AppText.header2,
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            Text(
+              'Dhaka',
+              style: AppText.subtitle3,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      '333',
+                      style: AppText.header2,
+                    ),
+                    Text('Followers')
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text(
+                      '444',
+                      style: AppText.header2,
+                    ),
+                    Text('Posts')
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text(
+                      '5555',
+                      style: AppText.header2,
+                    ),
+                    Text('Following')
+                  ],
+                ),
+              ],
+            ),
+            Divider(
+              thickness: 1,
+              height: 24,
+            ),
+          ],
+        ),
       ),
     );
   }

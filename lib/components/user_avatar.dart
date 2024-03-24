@@ -9,12 +9,13 @@ class UserAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: const BorderRadius.all(
-        Radius.circular(30),
+        Radius.circular(50),
       ),
       child: Image.asset(
         'assets/temp/user1.jpg',
         width: size,
         height: size,
+        fit: BoxFit.cover,
       ),
     );
   }
