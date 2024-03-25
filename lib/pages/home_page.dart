@@ -1,6 +1,7 @@
 import 'package:Hashi/components/app_icons.dart';
 import 'package:Hashi/components/post_item.dart';
 import 'package:Hashi/components/toolbar.dart';
+import 'package:Hashi/config/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,7 +23,9 @@ class _HomePageState extends State<HomePage> {
         title: 'Hashi',
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(AppRoutes.nearby);
+            },
             icon: SvgPicture.asset(AppIcons.icLocation),
           ),
         ],
