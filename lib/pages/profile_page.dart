@@ -42,26 +42,26 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      body: const Column(
         children: [
           UserAvatar(
             size: 90,
           ),
-          const SizedBox(
+          SizedBox(
             height: 24,
           ),
-          const Text(
+          Text(
             'aliza',
             style: AppText.header2,
           ),
-          const SizedBox(
+          SizedBox(
             height: 24,
           ),
-          const Text(
+          Text(
             'Dhaka',
             style: AppText.subtitle3,
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
@@ -93,7 +93,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          const Divider(
+          Divider(
             thickness: 1,
             height: 24,
           ),

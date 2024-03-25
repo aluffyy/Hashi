@@ -14,7 +14,7 @@ class AppTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hint,
         labelText: hint,
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: Colors.white,
         ),
         border: const UnderlineInputBorder(

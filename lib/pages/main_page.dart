@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   final pages = [
-    HomePage(),
+    const HomePage(),
     const Center(
       child: Text('Favorite'),
     ),
@@ -66,7 +66,7 @@ class MyBottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 85,
-      margin: EdgeInsets.all(24),
+      margin: const EdgeInsets.all(24),
       child: Stack(
         children: [
           Positioned(
@@ -75,7 +75,7 @@ class MyBottomNav extends StatelessWidget {
             top: 17,
             child: Container(
               height: 70,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(25))),
               child: Row(
@@ -94,7 +94,7 @@ class MyBottomNav extends StatelessWidget {
                         current: currentIndex,
                         name: Menus.message),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Expanded(
                     child: BottomNavigationItem(
                         onPressed: () => onTap(Menus.favorite),
@@ -123,7 +123,7 @@ class MyBottomNav extends StatelessWidget {
                 width: 64,
                 height: 64,
                 padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.primary,
                   shape: BoxShape.circle,
                 ),

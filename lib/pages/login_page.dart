@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Username',
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(17),
                       ),
@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(17),
                       ),
