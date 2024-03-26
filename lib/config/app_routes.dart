@@ -6,10 +6,10 @@ import 'package:Hashi/pages/nearby_page.dart';
 
 class AppRoutes {
   static final pages = {
-    login: (context) => const LoginPage(),
-    home: (context) => const HomePage(),
-    main: (context) => const MainPage(),
-    editProfile: (context) => const EditProfilePage(),
+    login: (context) => LoginPage(),
+    home: (context) => HomePage(),
+    main: (context) => MainPage(),
+    editProfile: (context) => EditProfilePage(),
     nearby: (context) => NearbyPage(),
   };
 

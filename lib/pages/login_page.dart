@@ -1,11 +1,20 @@
+import 'dart:convert';
+
 import 'package:Hashi/components/app_icons.dart';
-import 'package:Hashi/config/app_routes.dart';
+import 'package:Hashi/config/app_strings.dart';
 import 'package:Hashi/styles/app_colors.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+const baseUrl = 'http://localhost:8080';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  final loginRoute = '$baseUrl/login';
+  final userNameController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +28,6 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.all(24),
             child: Column(
               children: [
-                // const Text(
-                //   'Hello, welcome back!',
-                //   style: TextStyle(
-                //     color: Colors.white,
-                //     fontSize: 22,
-                //     fontWeight: FontWeight.bold,
-                //   ),
-                // ),
-                // const SizedBox(height: 10), // Adjust spacing as needed
                 const Spacer(),
                 Image.asset(
                   'assets/images/logo.png',
@@ -45,8 +45,9 @@ class LoginPage extends StatelessWidget {
 
                 const Spacer(),
                 TextField(
+                  controller: userNameController,
                   decoration: InputDecoration(
-                    hintText: 'Username',
+                    hintText: AppStrings.username,
                     border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(17),
@@ -54,14 +55,14 @@ class LoginPage extends StatelessWidget {
                     ),
                     filled: true,
                     fillColor: AppColors.fieldColor,
-                    // fillColor: Colors.white.withOpacity(0.5),
                   ),
                 ),
 
                 const SizedBox(height: 8),
                 TextField(
+                  controller: passwordController,
                   decoration: InputDecoration(
-                    hintText: 'Password',
+                    hintText: AppStrings.password,
                     border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(17),
@@ -85,7 +86,7 @@ class LoginPage extends StatelessWidget {
                     style: TextButton.styleFrom(
                       foregroundColor: const Color.fromARGB(255, 53, 133, 139),
                     ),
-                    child: const Text('Forgot Password?'),
+                    child: const Text(AppStrings.forgotPassword),
                   ),
                 ),
                 SizedBox(
@@ -93,6 +94,7 @@ class LoginPage extends StatelessWidget {
                   height: 48,
                   child: ElevatedButton(
                     onPressed: () {
+                      doLogin();
                       // Navigator.of(context).push(
                       //   MaterialPageRoute(
                       //     builder: (Context) {
@@ -100,7 +102,7 @@ class LoginPage extends StatelessWidget {
                       //     },
                       //   ),
                       // );
-                      Navigator.of(context).pushReplacementNamed(AppRoutes.main);
+                      // Navigator.of(context).pushReplacementNamed(AppRoutes.main);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff14FFEC),
@@ -219,5 +221,23 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<String> doLogin() async {
+    final username = userNameController.text;
+    final password = passwordController.text;
+    final body = {
+      'username': username,
+      'password': password,
+    };
+    final response =
+        await http.post(Uri.parse(loginRoute), body: jsonEncode(body));
+    if (response.statusCode == 200) {
+      print(response.body);
+      return response.body;
+    } else {
+      print('bleh');
+      throw Exception('error');
+    }
   }
 }
