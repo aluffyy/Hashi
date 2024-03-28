@@ -44,7 +44,7 @@ I encourage you to partake in the evolution of Hashi! Here's how you can join th
    - **Thorough Testing:** Rigorously test your changes to ensure they don't introduce any regressions.
 
 5. **Committing Your Work:**
-   - **Git Command:** Use `git add <changed_files>` to stage your changes for committing. You can specify specific files or use `git add .` for all modified files.
+   - **Git Command:** Use `git add <changed_files>` to stage your changes for committing. You can specify specific files or use `git add .` for all modified files. 
    - **Commit Message:** Provide a clear and concise message describing your changes using ```git commit -m "<your_commit_message>"```.
 
 6. **Pushing to Your Fork:**
