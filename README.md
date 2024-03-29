@@ -28,7 +28,7 @@ I encourage you to partake in the evolution of Hashi! Here's how you can join th
 
 1. **Forking the Repository:**
    - **GitHub Interface:** Visit the Hashi repository on GitHub ([https://github.com/](https://github.com/)<your-username>/Hashi) and click the "Fork" button in the top-right corner. This creates a copy of the repository under your own GitHub account.
-   - **Command Line:** Alternatively, use the `git` command: ```git clone --depth=1 https://github.com/aluffyy/Hashi.git```
+   - **Command Line:** Alternatively, use the `git` command: ```git clone --depth=1 https://github.com/aluffyy/Hashi.git``` 
 
 2. **Cloning Your Fork:**
    - Access your terminal or command prompt.
