@@ -7,7 +7,7 @@
 * **Core Functionality:**
     - Profiles: Create a personalized profile with a captivating bio, photos, and essential details.
     - News Feed: Keep up with the latest posts, updates, and photos from people you follow.
-    - Nearby Network: Discover and connect with users near you, powered by the Flutter Maps package.
+    - Nearby Network: Discover and connect with users near you, powered by the Flutter Maps package. 
     - Messaging: Send direct messages to your friends and chat privately.
     - Photo Sharing: Capture and share life's moments with stunning photos.
 * **Coming Soon:**
