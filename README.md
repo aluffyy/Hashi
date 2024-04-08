@@ -7,7 +7,7 @@
 * **Core Functionality:**
     - Profiles: Create a personalized profile with a captivating bio, photos, and essential details.
     - News Feed: Keep up with the latest posts, updates, and photos from people you follow.
-    - Nearby Network: Discover and connect with users near you, powered by the Flutter Maps package.
+    - Nearby Network: Discover and connect with users near you, powered by the Flutter Maps package. 
     - Messaging: Send direct messages to your friends and chat privately.
     - Photo Sharing: Capture and share life's moments with stunning photos.
 * **Coming Soon:**
@@ -28,7 +28,7 @@ I encourage you to partake in the evolution of Hashi! Here's how you can join th
 
 1. **Forking the Repository:**
    - **GitHub Interface:** Visit the Hashi repository on GitHub ([https://github.com/](https://github.com/)<your-username>/Hashi) and click the "Fork" button in the top-right corner. This creates a copy of the repository under your own GitHub account.
-   - **Command Line:** Alternatively, use the `git` command: ```git clone --depth=1 https://github.com/aluffyy/Hashi.git```
+   - **Command Line:** Alternatively, use the `git` command: ```git clone --depth=1 https://github.com/aluffyy/Hashi.git``` 
 
 2. **Cloning Your Fork:**
    - Access your terminal or command prompt.
@@ -44,7 +44,7 @@ I encourage you to partake in the evolution of Hashi! Here's how you can join th
    - **Thorough Testing:** Rigorously test your changes to ensure they don't introduce any regressions.
 
 5. **Committing Your Work:**
-   - **Git Command:** Use `git add <changed_files>` to stage your changes for committing. You can specify specific files or use `git add .` for all modified files.
+   - **Git Command:** Use `git add <changed_files>` to stage your changes for committing. You can specify specific files or use `git add .` for all modified files. 
    - **Commit Message:** Provide a clear and concise message describing your changes using ```git commit -m "<your_commit_message>"```.
 
 6. **Pushing to Your Fork:**
