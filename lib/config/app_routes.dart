@@ -1,3 +1,4 @@
+import 'package:Hashi/model/user.dart';
 import 'package:Hashi/pages/edit_profile_page.dart';
 import 'package:Hashi/pages/home_page.dart';
 import 'package:Hashi/pages/login_page.dart';
@@ -8,7 +9,16 @@ class AppRoutes {
   static final pages = {
     login: (context) => LoginPage(),
     home: (context) => HomePage(),
-    main: (context) => MainPage(),
+    main: (context) => MainPage(
+            user: User(
+          1,
+          firstname: '',
+          lastname: '',
+          mobile: '',
+          birthday: '',
+          gender: '',
+          visibleGender: '',
+        )),
     editProfile: (context) => EditProfilePage(),
     nearby: (context) => NearbyPage(),
   };

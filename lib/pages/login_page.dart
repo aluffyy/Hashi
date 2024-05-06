@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:Hashi/components/app_icons.dart';
-import 'package:Hashi/config/app_routes.dart';
 import 'package:Hashi/config/app_strings.dart';
 import 'package:Hashi/model/user.dart';
+import 'package:Hashi/pages/main_page.dart';
 import 'package:Hashi/styles/app_colors.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
@@ -101,8 +101,11 @@ class LoginPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () async {
                       final user = await doLogin();
-                      Navigator.of(context)
-                          .pushReplacementNamed(AppRoutes.main);
+                      Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) {
+                          return MainPage(user: user);
+                        },
+                      ));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff14FFEC),

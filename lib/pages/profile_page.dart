@@ -1,13 +1,16 @@
 import 'package:Hashi/components/toolbar.dart';
 import 'package:Hashi/components/user_avatar.dart';
 import 'package:Hashi/config/app_routes.dart';
+import 'package:Hashi/model/user.dart';
 import 'package:Hashi/styles/app_text.dart';
 import 'package:flutter/material.dart';
 
 enum ProfileMenu { edit, logout }
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  final User user;
+
+  const ProfilePage({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +54,7 @@ class ProfilePage extends StatelessWidget {
             height: 24,
           ),
           Text(
-            'aliza',
+            '${user.firstname} ${user.lastname}',
             style: AppText.header2,
           ),
           SizedBox(

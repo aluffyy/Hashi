@@ -1,5 +1,6 @@
 import 'package:Hashi/components/app_icons.dart';
 import 'package:Hashi/components/bottom_navigation_item.dart';
+import 'package:Hashi/model/user.dart';
 import 'package:Hashi/pages/home_page.dart';
 import 'package:Hashi/pages/profile_page.dart';
 import 'package:Hashi/styles/app_colors.dart';
@@ -7,7 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  final User user;
+
+  const MainPage({super.key, required this.user});
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -20,7 +23,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: pages[currentIndex.index],
+      body: pages()[currentIndex.index],
       bottomNavigationBar: MyBottomNav(
         currentIndex: currentIndex,
         onTap: (Menus value) {
@@ -32,19 +35,21 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  final pages = [
-    const HomePage(),
-    const Center(
-      child: Text('Favorite'),
-    ),
-    const Center(
-      child: Text('Add Post'),
-    ),
-    const Center(
-      child: Text('Messages'),
-    ),
-    const ProfilePage(),
-  ];
+  pages() => [
+        const HomePage(),
+        const Center(
+          child: Text('Favorite'),
+        ),
+        const Center(
+          child: Text('Add Post'),
+        ),
+        const Center(
+          child: Text('Messages'),
+        ),
+        ProfilePage(
+          user: widget.user,
+        ),
+      ];
 }
 
 enum Menus {
