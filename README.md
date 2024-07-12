@@ -46,7 +46,7 @@ Hashi is a full-fledged social media app built with Flutter, designed to foster 
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/Hashi.git
+   git clone https://github.com/aluffyy/Hashi.git
    ```
 
 2. **Backend Setup:**
