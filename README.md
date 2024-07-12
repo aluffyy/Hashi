@@ -1,6 +1,3 @@
-Certainly! I'll combine the information from both README files and present a comprehensive version in full markup language. Here's the result:
-
-```markdown
 # Hashi: Building Bridges Between Connections
 
 Hashi is a full-fledged social media app built with Flutter, designed to foster connections and create a vibrant online community. We're in active development, constantly striving to improve the user experience and warmly welcome contributions from talented developers!
